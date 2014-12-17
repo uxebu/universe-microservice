@@ -1,14 +1,16 @@
 {
   "name": "universe-microservice",
   "version": "0.0.0",
-  "description": "universe-microservice",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/uxebu/universe-microservice.git"
+  },
+  "scripts": {
+    "test": "mocha src",
+    "dev": "nodemon bin/start-server.js",
+    "start": "npm run dev"
   },
   "author": "uxebu",
   "license": "MIT",
@@ -16,6 +18,11 @@
     "url": "https://github.com/uxebu/universe-microservice/issues"
   },
   "homepage": "https://github.com/uxebu/universe-microservice",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "express": "^4.10.6",
+    "flowdock": "^0.9.0"
+  },
   "devDependencies": {
     "mocha": "^2.0.1"
   }
