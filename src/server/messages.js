@@ -7,37 +7,18 @@ module.exports = function(config) {
   var messages = {};
 
   messages.get = function() {
-    var messages = [
-      {
-        "app":"chat",
-        "sent":1317397485508,
-        "uuid":"odHapx1VWp7WTrdQ",
-        "tags":[],
-        "flow": "deadbeefdeadbeef",
-        "id":3816534,
-        "event":"action",
-        "content":{
-          "type":"add_twitter_search",
-          "description":"flowdock"
-        },
-        "attachments": [],
-        "user":"18"
-      },
-      {
-        "app": "chat",
-        "event": "message",
-        "tags": [],
-        "uuid": "4W_LQEybVaX-gJmi",
-        "id": 45590,
-        "flow": "deadbeefdeadbeef",
-        "content": "Hello World",
-        "sent": 1317715340213,
-        "attachments": [],
-        "user": "2"
-      }
-    ];
-    return Promise.resolve(messages);
+    return new Promise(function(resolve, reject) {
+      var params = {
+        // tags: ['#kb']
+      };
+      session.get('/flows/uxebu/main/messages', params, function(err, flow, response) {
+        if (err) console.log('errr');
+        console.log(typeof(response));
+        if (err) return reject(err);
+        return resolve(response);
+      });
+    });
   };
 
   return messages;
-}
+};

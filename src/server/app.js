@@ -8,12 +8,11 @@ module.exports = function(config) {
 
   app
     .get('/', function(req, res) {
-      messages.get().then(function(messages) {
-        console.log(messages);
-        // var resources = resources.fromMessages(messages);
-        return [];
-      }).then(function() {
-        res.send('hxi');
+      messages.get()
+      .then(resources.fromMessags)
+      .then(function(messages) {
+        // console.log(messages);
+        res.send(messages);
       }).catch(function() {
         //
       });
