@@ -9,12 +9,13 @@ module.exports = function(config) {
   messages.get = function() {
     return new Promise(function(resolve, reject) {
       var params = {
-        // tags: ['#kb']
+        tags: ['#kb'],
+        // search: 'master'
       };
       session.get('/flows/uxebu/main/messages', params, function(err, flow, response) {
         if (err) console.log('errr');
         if (err) return reject(err);
-        return resolve(response.body);
+        return resolve(response);
       });
     });
   };
