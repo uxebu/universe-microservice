@@ -1,0 +1,22 @@
+{
+  "name": "universe-microservice",
+  "version": "0.0.0",
+  "description": "universe-microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uxebu/universe-microservice.git"
+  },
+  "author": "uxebu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uxebu/universe-microservice/issues"
+  },
+  "homepage": "https://github.com/uxebu/universe-microservice",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
