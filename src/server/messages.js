@@ -13,9 +13,8 @@ module.exports = function(config) {
       };
       session.get('/flows/uxebu/main/messages', params, function(err, flow, response) {
         if (err) console.log('errr');
-        console.log(typeof(response));
         if (err) return reject(err);
-        return resolve(response);
+        return resolve(response.body);
       });
     });
   };
